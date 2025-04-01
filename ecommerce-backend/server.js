@@ -24,6 +24,9 @@ app.get("/categories", async (req, res) => {
     }
 });
 
+
+
+
 // Create Product (Dynamically add to the corresponding category collection)
 app.post("/products", async (req, res) => {
     try {
