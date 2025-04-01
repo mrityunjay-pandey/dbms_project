@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="button-container">
+        <button onclick="showForm('create')">Create</button>
+        <button onclick="showForm('update')">Update</button>
+        <button onclick="showForm('delete')">Delete</button>
+    </div>
+
+    <!-- Create Form -->
+    <div id="create" class="form-container" style="display:none;">
+        <h2>Create Product</h2>
+        <form>
+            <label for="categories-name">Categories</label>
+            <input type="text" id="categories-name" name="categories-name" required>
+
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" required>
+
+            <label for="product-price">Price:</label>
+            <input type="number" id="product-price" name="product-price" required>
+
+            <label for="product-link">Product Link:</label>
+            <input type="url" id="product-link" name="product-link" required>
+
+            <button type="submit">Create</button>
+        </form>
+    </div>
+
+    <!-- Update Form -->
+    <div id="update" class="form-container" style="display:none;">
+        <h2>Update Product</h2>
+        <form>
+            <label for="update-category">Category:</label>
+            <select id="update-category" name="update-category" required>
+                <option value="">Select Category</option>
+            </select>
+
+            <label for="old-product-name">Old Product Name:</label>
+            <input type="text" id="old-product-name" name="old-product-name" required>
+
+            <label for="new-product-name">New Product Name:</label>
+            <input type="text" id="new-product-name" name="new-product-name" required>
+
+            <label for="new-product-price">New Price:</label>
+            <input type="number" id="new-product-price" name="new-product-price" required>
+
+            <label for="new-product-link">New Product Link:</label>
+            <input type="url" id="new-product-link" name="new-product-link" required>
+
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+    <!-- Delete Form -->
+    <!-- Delete Form -->
+<div id="delete" class="form-container" style="display:none;">
+    <h2>Delete Product</h2>
+    <form>
+        <label for="delete-category">Category:</label>
+        <select id="delete-category" name="delete-category" required>
+            <option value="">Select Category</option>
+        </select>
+
+        <label for="delete-product-name">Product Name:</label>
+        <input type="text" id="delete-product-name" placeholder="Enter Product Name" required>
+
+        <button type="button" class="delete-button">Delete</button>
+    </form>
+</div>
+
+
+    <script src="script2.js"></script>
+</body>
+</html>

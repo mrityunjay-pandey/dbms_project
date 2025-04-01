@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    /* background-color: cadetblue */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #c2c0b3;
+    color: #0a0a0a;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Categories */
+.categories, .featured {
+    text-align: center;
+    padding: 20px;
+    background-color: cadetblue;
+}
+
+.categories h2, .featured h2 {
+    padding: 20px;
+}
+
+.product {
+    width: 200px; /* Adjust as needed */
+    text-align: center;
+}
+
+.product h3 {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    font-size: 16px;
+}
+
+.product button {
+    background-color: #2a475e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.product button:hover {
+    background-color: #00b634;
+    transform: scale(1.05);
+}
+
+.product button:active {
+    background-color: #24e267; 
+    transform: scale(0.98);
+}
+
+.category-list, .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: cadetblue;
+}
+
+.category img, .product img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+/* Footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    background-color: #c2c0b3;
+}
+.footer-section {
+    width: 100%;
+    margin: 0 20px;
+}
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.left {
+    margin-left: -30px;
+}
+.right {
+    margin-right: -40px;
+}

@@ -1,0 +1,105 @@
+body {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Main Button Styles */
+.button-container button {
+    background-color: #2a475e;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 250px;
+    margin: 5px;
+}
+
+.button-container button:hover {
+    background-color: #00b634;
+    transform: scale(1.05);
+}
+
+.button-container button:active {
+    background-color: #24e267;
+    transform: scale(0.98);
+}
+
+/* Form Container */
+.form-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 350px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+/* Form Inputs */
+.form-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-container select,
+.form-container input {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Form Buttons */
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a475e;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.form-container button:hover {
+    background-color: #00b634;
+    transform: scale(1.05);
+}
+
+.form-container button:active {
+    background-color: #24e267;
+    transform: scale(0.98);
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: red;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .button-container button {
+        width: 90%;
+    }
+}
