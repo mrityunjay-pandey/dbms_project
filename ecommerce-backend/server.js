@@ -24,15 +24,13 @@ app.get("/categories", async (req, res) => {
     }
 });
 
-
-
-
 // Create Product (Dynamically add to the corresponding category collection)
 app.post("/products", async (req, res) => {
     try {
         const { category, name, price, link } = req.body;
         if (!category || !name || !price || !link) return res.status(400).json({ message: "Missing fields" });
 
+        // Directly access the category collection
         const collection = mongoose.connection.db.collection(category);
         await collection.insertOne({ name, price, link });
 
@@ -51,6 +49,7 @@ app.put("/products", async (req, res) => {
             return res.status(400).json({ message: "Missing fields" });
         }
 
+        // Directly access the category collection
         const collection = mongoose.connection.db.collection(category);
         const result = await collection.updateOne(
             { name: oldName },
@@ -74,6 +73,7 @@ app.delete("/products", async (req, res) => {
         const { category, name } = req.body;
         if (!category || !name) return res.status(400).json({ message: "Missing fields" });
 
+        // Directly access the category collection
         const collection = mongoose.connection.db.collection(category);
         const result = await collection.deleteOne({ name });
 
@@ -85,6 +85,27 @@ app.delete("/products", async (req, res) => {
     } catch (err) {
         console.error("Error deleting product:", err);
         res.status(500).json({ message: "Error deleting product", error: err });
+    }
+});
+
+// Get Products in Category
+app.get('/products/:category', async (req, res) => {
+    const category = req.params.category;
+
+    try {
+        // Directly access the collection for the given category
+        const collection = mongoose.connection.db.collection(category);
+        const products = await collection.find().toArray();
+
+        if (products.length === 0) {
+            return res.status(404).json({ error: 'No products found in this category' });
+        }
+
+        // Send the products as a response
+        res.json(products);
+    } catch (error) {
+        console.error('Error fetching products:', error);
+        res.status(500).json({ error: 'Internal server error' });
     }
 });
 
