@@ -1,16 +1,14 @@
 {
-  "name": "aparna-telecom",
+  "name": "aparna-telecom-documentation",
   "version": "1.0.0",
-  "main": "storeFans.js",
+  "description": "Technical documentation for Aparna Telecom E-commerce Project",
+  "main": "generate-pdf.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate-pdf": "node generate-pdf.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "fs": "^0.0.1-security",
-    "mongodb": "^6.15.0"
-  }
+    "markdown-pdf": "^11.0.0"
+  },
+  "author": "Technical Documentation Team",
+  "license": "MIT"
 }

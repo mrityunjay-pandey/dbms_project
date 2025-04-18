@@ -5,6 +5,11 @@ body {
     background-color: #f4f4f4;
 }
 
+.hero{
+    height: 50%;
+    width: 50%;
+}
+
 /* Main Button Styles */
 .button-container button {
     background-color: #2a475e;
